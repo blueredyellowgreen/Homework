@@ -1,9 +1,9 @@
 import java.util.*; 
 
 /*
-$javac Homework1.java
+$javac SortColors.java
 
-$java -Xmx128M -Xms16M Homework1
+$java -Xmx128M -Xms16M SortColors
 
 test-0 PASSED.
 test-1 PASSED.
@@ -17,7 +17,7 @@ test-8 PASSED.
 test-9 PASSED.
 test-10 PASSED.
 */
-public class Homework1{
+public class SortColors{
 
     public static void main(String []args){
         testSortColors();
@@ -74,7 +74,7 @@ public class Homework1{
         };
 
         for (int i = 0; i < inputs.length; i++) {
-            Homework1.sortColors(inputs[i]);
+            SortColors.sortColors(inputs[i]);
             int[] expected = answers[i];
             assertEquals(i, inputs[i], expected);
         }
@@ -88,3 +88,4 @@ public class Homework1{
         }
     }
 }
+
