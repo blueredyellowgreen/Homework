@@ -16,7 +16,12 @@ test-7 PASSED.
 test-8 PASSED.
 test-9 PASSED.
 test-10 PASSED.
+test-11 PASSED.
+test-12 PASSED.
+test-13 PASSED.
 */
+import java.util.*; 
+
 public class SortColors{
 
     public static void main(String []args){
@@ -25,6 +30,7 @@ public class SortColors{
     
     // 75. Sort Colors
     // Use counting sort to sort colors
+    // Time Complexity : O(2N)
     public static void sortColors(int[] nums) {
         // Iterrate the array counting numbers of 0, 1, and 2
         int[] counts = new int[3]; 
@@ -58,6 +64,9 @@ public class SortColors{
                 {1, 0, 1, 2, 2, 0},
                 {0, 1, 0, 2, 2, 1},
                 {1, 2, 1, 0, 0, 2},
+                {1, 1, 0, 0, 2, 2},
+                {2, 2, 0, 0, 1, 1}, 
+                {0, 0, 1, 1, 2, 2}
         };
         int[][] answers = {
                 {},
@@ -70,7 +79,10 @@ public class SortColors{
                 {0, 0, 1, 1, 2, 2},
                 {0, 0, 1, 1, 2, 2},
                 {0, 0, 1, 1, 2, 2},
-                {0, 0, 1, 1, 2, 2}
+                {0, 0, 1, 1, 2, 2},
+                {0, 0, 1, 1, 2, 2},
+                {0, 0, 1, 1, 2, 2},
+                {0, 0, 1, 1, 2, 2},               
         };
 
         for (int i = 0; i < inputs.length; i++) {
@@ -83,9 +95,9 @@ public class SortColors{
     private static void assertEquals(int number, int[] actual, int[] expected) {
         if (Arrays.equals(actual, expected)) {
             System.out.println("test-" + number + " PASSED.");
-        } else {
-            System.out.println("test-" + number + " FAILED. actual: " + Arrays.toString(actual) + ", expected: " + Arrays.toString(expected));
+            return;
         }
+        System.out.println("test-" + number + " FAILED. actual: " + Arrays.toString(actual) + ", expected: " + Arrays.toString(expected));
     }
 }
 
